@@ -79,6 +79,7 @@ export const Home = () => {
         <Testimonials />
         <SectionDivider type="glowing-line" />
         <FAQ />
+        
         </div>
 
 

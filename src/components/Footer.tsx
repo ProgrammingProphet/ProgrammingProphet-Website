@@ -65,7 +65,7 @@ export const Footer = () => {
             </div>
             {/* <p className="text-xs font-light text-slate-100 dark:text-blue-400">powered by Gyanti Enterprises</p> */}
 
-            <p className="pr-4 text-md  text-slate-200 dark:text-blue-400 lg:mb-4 mb-6 italic">
+            <p className="pr-4 text-md  text-slate-200 dark:text-blue-400 lg:mb-8 mb-6 italic">
               {/* "Transforming Ideas into Reality." */}
               "Digital Engineering Partner for Growing Businesses."
             </p>
@@ -83,7 +83,7 @@ export const Footer = () => {
                 <MapPin size={18} className="text-blue-500 mt-0.5 shrink-0" />
                 <span className="text-sm text-left pr-16 lg:pr-12">
                   {/* <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-0.5">REGISTERED BUSINESS ADDRESS</span> */}
-                  Digha, Navi Mumbai, Maharashtra, India – 400708
+                  Thane, Maharashtra, INDIA
                 </span>
               </div>
             </div>

@@ -1,10 +1,22 @@
 import { useState, type FormEvent } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  ShieldCheck, Code, Zap, ArrowRight, Layout, Check, CheckCircle2,
+  ShieldCheck, Zap, ArrowRight, Layout, Check, CheckCircle2,
   MessageSquare, Phone, Globe, Server, Star, Sparkles, AlertCircle,
-  Loader2, Plus, Minus, ArrowUpRight, Gift
+  Loader2, Plus, Minus, ArrowUpRight, Gift,
+  TabletSmartphone, Rocket, MapPin, ShoppingBag, Briefcase, Lightbulb, Quote, HandshakeIcon
 } from 'lucide-react';
+
+const WhatsAppIcon = ({ className }: { className?: string }) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+  </svg>
+)
 
 export const WebDevelopment = () => {
   // Lead Form State
@@ -93,9 +105,9 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
 
   // Custom data arrays
   const features = [
-    { title: "Professional Design", desc: "Sleek, bespoke layout tailored to your brand identity." },
-    { title: "100% Mobile Responsive", desc: "Flawless performance on mobile, tablet, and desktop." },
-    { title: "High-Speed Hosting (1 Year)", desc: "Lightning fast loading speeds on secure servers." },
+    { title: "Professional Design", desc: " Modern layout tailored to your brand identity." },
+    { title: "Mobile Responsive", desc: "Works perfectly on mobile, tablet, and desktop." },
+    { title: "High-Speed Hosting (1 Year)", desc: "Lightning fast loading speeds." },
     { title: "Domain Name (1 Year)", desc: "Your custom address online (.com or .in included)." },
     { title: "SSL Security Certificate", desc: "Encrypts data, keeps users safe, and builds search trust." },
     { title: "WhatsApp Integration", desc: "One-click chat button to let visitors text you directly." },
@@ -106,11 +118,11 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
   ];
 
   const targetMarkets = [
-    { title: "Startups & Agencies", desc: "Build authority and pitch to investors with a high-end corporate web presence." },
-    { title: "Local Businesses", desc: "Be visible on Google when customers search for services in your area." },
-    { title: "Retail & Small Shops", desc: "Showcase products online, receive order enquiries directly on WhatsApp." },
-    { title: "Service Providers", desc: "For contractors, interior designers, gyms, salons, and workshops." },
-    { title: "Consultants & CA", desc: "Share case studies, credentials, and book consulting calls effortlessly." },
+    { title: "Startups & Agencies", desc: "Build authority and pitch to investors with a high-end corporate web presence.", icon: <Rocket size={18} className="fill-blue-500/10 text-blue-500" /> },
+    { title: "Local Businesses", desc: "Be visible on Google when customers search for services in your area.", icon: <MapPin size={18} className="fill-blue-500/10 text-blue-500" /> },
+    { title: "Retail & Small Shops", desc: "Showcase products online, receive order enquiries directly on WhatsApp.", icon: <ShoppingBag size={18} className="fill-blue-500/10 text-blue-500" /> },
+    { title: "Service Providers", desc: "For contractors, interior designers, gyms, salons, and workshops.", icon: <Briefcase size={18} className="fill-blue-500/10 text-blue-500" /> },
+    { title: "Consultants", desc: "Share case studies, credentials, and book consulting calls effortlessly.", icon: <Lightbulb size={18} className="fill-blue-500/10 text-blue-500" /> },
   ];
 
   const steps = [
@@ -145,19 +157,22 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
       name: "PCKeyZone",
       role: "E-Commerce Platform",
       text: "Developing a modern, user-friendly website for PCKeyZone that looks impressive & has significantly improved our online presence and customer engagement.",
-      image: "/testimonials/PCKeyZone.png"
+      image: "/testimonials/PCKeyZone.png",
+      rating: 5
     },
     {
       name: "SSCMR College",
       role: "Educational Institution",
       text: "The team at ProgrammingProphet built a professional and responsive website for SSCMR College that truly reflects our academic excellence and values.",
-      image: "/testimonials/SSCMR-College.png"
+      image: "/testimonials/SSCMR-College.png",
+      rating: 5
     },
     {
       name: "WeMurz Services",
       role: "IT Service & Consulting",
       text: "ProgrammingProphet created a fast, clean, and easy-to-manage website for WeMurz Services that has helped us reach and support more clients online.",
-      image: "/testimonials/wemore-logo.png"
+      image: "/testimonials/wemore-logo.png",
+      rating: 5
     },
   ];
 
@@ -214,8 +229,8 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
               <Sparkles size={14} className="animate-pulse" /> Limited Time Independence Offer
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1] font-heading">
-              Professional Business Website for Just <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">₹14,999</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-calibri text-white tracking-tight leading-[1.1] font-heading">
+              Professional Business Website for Just <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 font-arial ">₹14,999</span>
             </h1>
 
             <p className="text-lg md:text-xl text-slate-400 leading-relaxed max-w-2xl">
@@ -255,8 +270,8 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
                 onClick={handleWhatsAppChat}
                 className="inline-flex items-center justify-center gap-2 bg-[#128c7e]/15 border border-[#128c7e]/30 hover:bg-[#128c7e]/25 text-[#25d366] font-bold px-8 py-4 transition-all duration-300  text-center"
               >
-                <Phone className="w-5 h-5 fill-current" />
-                WhatsApp an Expert
+                <WhatsAppIcon className="w-5 h-5 fill-current" />
+                Connect on WhatsApp
               </button>
             </div>
 
@@ -296,7 +311,7 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
                   </div>
                   <div className="flex items-start gap-2.5">
                     <CheckCircle2 size={16} className="text-emerald-500 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-slate-300">Fast & Modern React framework build</span>
+                    <span className="text-sm text-slate-300">Fast & Modern React/Astro framework build</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <CheckCircle2 size={16} className="text-emerald-500 mt-0.5 flex-shrink-0" />
@@ -329,7 +344,7 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
             {[
               { label: "Modern Layouts", icon: <Layout size={20} className="text-blue-500" /> },
-              { label: "Mobile Responsive", icon: <Code size={20} className="text-blue-500" /> },
+              { label: "Mobile Responsive", icon: <TabletSmartphone size={20} className="text-blue-500" /> },
               { label: "Google Optimized", icon: <Sparkles size={20} className="text-blue-500" /> },
               { label: "Fast Loading Pages", icon: <Zap size={20} className="text-blue-500" /> },
               { label: "Secure & Reliable", icon: <ShieldCheck size={20} className="text-blue-500" /> },
@@ -348,7 +363,7 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
       {/* What You Get Detail Grid */}
       <section className="py-20 max-w-[1400px] mx-auto px-6 lg:px-12 z-10 relative">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white font-heading">
+          <h2 className="text-3xl md:text-4xl font-bold font-calibri text-white font-heading">
             What You Get in Our ₹14,999 Website Package
           </h2>
           <p className="text-slate-400 mt-4 leading-relaxed">
@@ -360,9 +375,9 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
           {features.map((feat, idx) => (
             <div
               key={idx}
-              className="p-6 bg-[#0a0f1c]/50 border border-slate-800/80  hover:border-blue-500/30 transition-all duration-300 flex items-start gap-4 group"
+              className="p-6 bg-[#0a0f1c]/50 border border-slate-800/80  hover:border-green-500/30 transition-all duration-300 flex items-start gap-4 group"
             >
-              <div className="w-9 h-9 bg-slate-900 border border-slate-800  flex items-center justify-center text-blue-500 group-hover:border-blue-500 group-hover:text-blue-400 flex-shrink-0 transition-colors">
+              <div className="w-9 h-9 bg-slate-900 border border-slate-800  flex items-center justify-center text-green-500 group-hover:border-green-500 group-hover:text-green-400 flex-shrink-0 transition-colors">
                 <Check size={18} />
               </div>
               <div>
@@ -380,15 +395,15 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
           <div className="grid lg:grid-cols-12 gap-12 items-center">
 
             <div className="lg:col-span-5 space-y-6">
-              <h2 className="text-3xl md:text-4xl font-extrabold text-white font-heading leading-tight">
+              <h2 className="text-3xl md:text-4xl font-bold font-calibri text-white font-heading leading-tight">
                 Designed to Match Your Specific Industry
               </h2>
               <p className="text-slate-400 leading-relaxed">
                 Whether you run a local workshop, a coaching hub, or supply products to other companies, a professional website gives your clients confidence that you are reliable.
               </p>
-              <p className="text-slate-400 leading-relaxed">
+              {/* <p className="text-slate-400 leading-relaxed">
                 We design and layout content targeted to your unique target audience, steering them cleanly toward placing enquiries.
-              </p>
+              </p> */}
               <div className="pt-2">
                 <a
                   href="#get-started"
@@ -402,18 +417,24 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
 
             <div className="lg:col-span-7 space-y-4">
               {targetMarkets.map((market, idx) => (
-                <div
+                <motion.div
                   key={idx}
-                  className="p-5 bg-[#0a0f1c]/80 border border-slate-800/60 hover:border-slate-800  transition-colors flex items-start gap-4"
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                  whileHover={{ x: -5 }}
+                  className="bg-[#0A0F1E] flex items-start lg:gap-4 lg:p-6 align-center p-2 group transition-all duration-300 border border-slate-600 hover:border-slate-400"
                 >
-                  <div className="text-blue-400 mt-1 flex-shrink-0">
-                    <CheckCircle2 size={18} className="fill-blue-500/10 text-blue-500" />
+                  <div className="p-3 bg-blue-500/10 text-blue-500 transition-colors shrink-0">
+                    {market.icon}
                   </div>
                   <div>
-                    <h3 className="text-md font-bold text-white mb-1">{market.title}</h3>
-                    <p className="text-slate-400 text-sm leading-relaxed">{market.desc}</p>
+                    <h4 className="h-8 p-3 lg:p-0 lg:text-xl font-bold text-white mb-1 transition-all">{market.title}</h4>
+                    <p className="text-slate-400 hidden lg:block">{market.desc}</p>
+                    <p className="text-slate-400 text-sm block lg:hidden px-3 pb-3">{market.desc}</p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
 
@@ -424,7 +445,7 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
       {/* Before vs After Section */}
       <section className="py-20 max-w-[1400px] mx-auto px-6 lg:px-12 z-10 relative">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white font-heading">
+          <h2 className="text-3xl md:text-4xl font-bold font-calibri text-white font-heading">
             Focus on Business Outcomes
           </h2>
           <p className="text-slate-400 mt-4 leading-relaxed">
@@ -482,7 +503,7 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
       <section className="py-20 bg-[#0a0f1c]/30 border-y border-slate-800/50 z-10 relative">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-white font-heading">
+            <h2 className="text-3xl md:text-4xl font-bold font-calibri text-white font-heading">
               Our Step-by-Step Launch Process
             </h2>
             <p className="text-slate-400 mt-4">
@@ -493,7 +514,7 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
           <div className="grid md:grid-cols-5 gap-6 relative">
             {steps.map((step, idx) => (
               <div key={idx} className="p-6 bg-[#0a0f1c]/90 border border-slate-800  relative space-y-3 flex flex-col h-full hover:border-blue-500/20 transition-all">
-                <div className="text-4xl font-black text-blue-500/20 select-none absolute top-4 right-4 leading-none">
+                <div className="text-2xl font-black text-blue-500/40 select-none absolute top-4 right-4 leading-none">
                   {step.num}
                 </div>
                 <h3 className="text-lg font-bold text-white pr-6">{step.title}</h3>
@@ -507,7 +528,7 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
       {/* Web Development Projects Showcase */}
       <section className="py-20 max-w-[1400px] mx-auto px-6 lg:px-12 z-10 relative">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white font-heading">
+          <h2 className="text-3xl md:text-4xl font-bold font-calibri text-white font-heading">
             Web Solutions We Have Built
           </h2>
           <p className="text-slate-400 mt-4 leading-relaxed">
@@ -567,7 +588,7 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
       <section className="py-20 bg-[#0a0f1c]/40 border-y border-slate-800/50 z-10 relative">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-white font-heading">
+            <h2 className="text-3xl md:text-4xl font-bold font-calibri text-white font-heading">
               Client Success Stories
             </h2>
             <p className="text-slate-400 mt-4">
@@ -575,36 +596,47 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8">
             {testimonials.map((t, idx) => (
-              <div
+              <motion.div
                 key={idx}
-                className="p-6 bg-[#0a0f1c]/90 border border-slate-800/80  space-y-4 flex flex-col justify-between hover:border-slate-800 transition-all"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1, duration: 0.5 }}
+                className="group backdrop-blur-sm border border-slate-600 hover:border-slate-400 dark:border-slate-800 p-8 transition-all duration-300 relative flex flex-col h-full"
               >
-                <div className="space-y-3">
-                  {/* Rating */}
-                  <div className="flex gap-0.5">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} size={15} className="fill-amber-400 text-amber-400" />
-                    ))}
-                  </div>
+                <Quote className="absolute top-5 right-8 text-blue-500/10 dark:text-blue-400/5 w-16 h-16 rotate-180 transition-transform group-hover:scale-110 group-hover:text-blue-500/10 dark:group-hover:text-blue-400/10 duration-300" />
 
-                  <p className="text-slate-300 text-sm leading-relaxed italic">
-                    "{t.text}"
-                  </p>
+                <div className="flex gap-1 mb-2 lg:mb-6 relative z-10">
+                  {[...Array(t.rating)].map((_, i) => (
+                    <Star key={i} size={20} className="fill-amber-400 text-amber-400" />
+                  ))}
                 </div>
 
-                {/* Profile info */}
-                <div className="flex items-center gap-3 pt-3 border-t border-slate-900">
-                  <div className="w-8 h-8  overflow-hidden bg-slate-800 border border-slate-700 flex-shrink-0 flex items-center justify-center font-bold text-xs text-blue-400">
-                    {t.name.charAt(0)}
+                <p className="text-slate-300 dark:text-slate-300 mb-3 lg:mb-6 relative z-10 leading-relaxed flex-grow">
+                  "{t.text}"
+                </p>
+
+                <div className="flex items-center lg:gap-4 gap-3 mt-auto relative z-10">
+                  <div className="relative">
+                    <img
+                      src={t.image}
+                      alt={t.name}
+                      loading="lazy"
+                      className="lg:w-10 lg:h-10 w-9 h-9 object-cover dark:border-slate-800 shadow-md"
+                    />
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-white">{t.name}</h4>
-                    <p className="text-xs text-slate-500 font-medium">{t.role}</p>
+                    <h4 className="text-base font-bold text-slate-200 dark:text-white">
+                      {t.name}
+                    </h4>
+                    <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">
+                      {t.role}
+                    </p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -613,7 +645,7 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
       {/* Pricing Packages Section */}
       <section className="py-20 max-w-[1400px] mx-auto px-6 lg:px-12 z-10 relative">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white font-heading">
+          <h2 className="text-3xl md:text-4xl font-bold font-calibri text-white font-heading">
             Transparent Pricing Plans
           </h2>
           <p className="text-slate-400 mt-4 leading-relaxed">
@@ -627,13 +659,13 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
           <div className="bg-[#0a0f1c]/90 border border-slate-800  p-6 relative flex flex-col justify-between h-full hover:border-slate-800 transition-all">
             <div className="space-y-4">
               <div>
-                <span className="text-xs font-bold text-blue-400 uppercase tracking-wider bg-blue-500/10 px-2 py-0.5 ">Promo Offer</span>
+                {/* <span className="text-xs font-bold text-blue-400 uppercase tracking-wider bg-blue-500/10 px-2 py-0.5 ">Promo Offer</span> */}
                 <h3 className="text-xl font-bold text-white mt-2">Starter Website</h3>
                 <p className="text-xs text-slate-400 mt-1">Perfect for basic online business visibility.</p>
               </div>
 
               <div className="border-y border-slate-800 py-4">
-                <div className="text-3xl font-extrabold text-white">₹14,999</div>
+                <div className="text-3xl font-extrabold text-white">₹14,999 <s className="text-gray-500 text-2xl">₹20,000</s></div>
                 <div className="text-[11px] text-slate-500 mt-0.5">First year cost (Includes Domain + Hosting)</div>
               </div>
 
@@ -659,7 +691,7 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
 
             <div className="pt-6">
               <a
-                href="#get-started"
+                href="#get-started cal(+100px)"
                 className="w-full inline-flex items-center justify-center gap-1.5 bg-blue-600 hover:bg-blue-500 text-white font-bold py-2.5  transition-colors text-sm"
               >
                 Choose Starter
@@ -675,7 +707,7 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
 
             <div className="space-y-4">
               <div>
-                <span className="text-xs font-bold text-blue-400 uppercase tracking-wider bg-blue-500/10 px-2 py-0.5 ">Advanced Growth</span>
+                {/* <span className="text-xs font-bold text-blue-400 uppercase tracking-wider bg-blue-500/10 px-2 py-0.5 ">Advanced Growth</span> */}
                 <h3 className="text-xl font-bold text-white mt-2">Professional Business</h3>
                 <p className="text-xs text-slate-400 mt-1">Best for established brands seeking leads.</p>
               </div>
@@ -719,7 +751,7 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
           <div className="bg-[#0a0f1c]/90 border border-slate-800  p-6 relative flex flex-col justify-between h-full hover:border-slate-800 transition-all">
             <div className="space-y-4">
               <div>
-                <span className="text-xs font-bold text-blue-400 uppercase tracking-wider bg-blue-500/10 px-2 py-0.5 ">Storefront</span>
+                {/* <span className="text-xs font-bold text-blue-400 uppercase tracking-wider bg-blue-500/10 px-2 py-0.5 ">Storefront</span> */}
                 <h3 className="text-xl font-bold text-white mt-2">Growth E-Commerce</h3>
                 <p className="text-xs text-slate-400 mt-1">For retailers who want to sell products online.</p>
               </div>
@@ -777,7 +809,7 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
               <div className="inline-flex items-center gap-1.5 text-blue-400 text-xs font-bold uppercase tracking-wider bg-blue-500/10 px-3 py-1 ">
                 <Gift size={12} /> Claim Promo Package
               </div>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-white font-heading">
+              <h2 className="text-3xl md:text-4xl font-bold font-calibri text-white font-heading">
                 Let's Launch Your Website
               </h2>
               <p className="text-slate-400 leading-relaxed">
@@ -962,7 +994,7 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
       {/* Accordion FAQ Section */}
       <section className="py-20 max-w-[1400px] mx-auto px-6 lg:px-12 z-10 relative">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white font-heading">
+          <h2 className="text-3xl md:text-4xl font-bold font-calibri text-white font-heading">
             Frequently Asked Questions
           </h2>
           <p className="text-slate-400 mt-4">
