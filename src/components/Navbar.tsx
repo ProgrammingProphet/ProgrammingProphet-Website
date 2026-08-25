@@ -113,8 +113,8 @@ export const Navbar = () => {
         <div className="flex items-center justify-between lg:h-[80px] h-[64px]">
 
           {/* Logo (Left) */}
-          <a 
-            href="/" 
+          <a
+            href="/"
             className="flex items-center group cursor-pointer shrink-0"
             onClick={(e) => {
               const currentPath = window.location.pathname;
@@ -212,7 +212,7 @@ export const Navbar = () => {
               <Search size={18} />
             </button> */}
 
-            <a href="/website-offer/" className="text-blue-600 font-semibold px-4 py-2.5 text-[14px] transition-colors flex items-center gap-2 hover:bg-blue-50 rounded-md border border-blue-200">
+            <a href="/website-offer/" className="text-blue-600 font-semibold px-4 py-2.5 text-[14px] transition-colors flex items-center gap-2 hover:bg-blue-50 border border-blue-200">
               ₹14,999 Website Offer
             </a>
             <a href="/contact/" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2.5  text-[14px] transition-colors flex items-center gap-2">
@@ -263,11 +263,11 @@ export const Navbar = () => {
                 </a>
               ))}
               <div className="h-[1px] bg-gray-100 my-2"></div>
-              <a href="/website-offer/" onClick={() => setIsMobileMenuOpen(false)} className="text-blue-600 font-semibold px-6 py-3 text-center transition-colors w-full flex items-center justify-center gap-2 border border-blue-200 rounded-md">
+              <a href="/website-offer/" onClick={() => setIsMobileMenuOpen(false)} className="text-blue-600 font-semibold px-6 py-3 text-center transition-colors w-full flex items-center justify-center gap-2 border border-blue-200">
                 ₹14,999 Website Offer
               </a>
               <a href="/contact/" onClick={() => setIsMobileMenuOpen(false)} className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3  text-center transition-colors w-full flex items-center justify-center gap-2">
-                Contact Us 
+                Contact Us
               </a>
             </div>
           </motion.div>
