@@ -17,6 +17,7 @@ export default defineConfig({
         'services/software-development': resolve(__dirname, 'services/software-development/index.html'),
         'services/devops-cloud': resolve(__dirname, 'services/devops-cloud/index.html'),
         'services/system-integration': resolve(__dirname, 'services/system-integration/index.html'),
+        'website-offer': resolve(__dirname, 'website-offer/index.html'),
         404: resolve(__dirname, '404.html'),
         500: resolve(__dirname, '500.html'),
       },
