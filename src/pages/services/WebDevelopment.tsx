@@ -2,9 +2,9 @@ import { useState, type FormEvent } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   ShieldCheck, Zap, ArrowRight, Layout, Check, CheckCircle2,
-  MessageSquare, Phone, Globe, Server, Star, Sparkles, AlertCircle,
+  MessageSquare, Globe, Server, Star, Sparkles, AlertCircle,
   Loader2, Plus, Minus, ArrowUpRight, Gift,
-  TabletSmartphone, Rocket, MapPin, ShoppingBag, Briefcase, Lightbulb, Quote, HandshakeIcon
+  TabletSmartphone, Rocket, MapPin, ShoppingBag, Briefcase, Lightbulb, Quote
 } from 'lucide-react';
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
@@ -141,6 +141,7 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
       tech: ["Next.js", "TailwindCSS", "Node.js", "MongoDB", "Payment Gateways"],
       image: "/projects/PC-Key-Zone.png",
       desc: "A secure, modern web storefront built to support frictionless software key sales, with responsive search filters and rapid load speeds.",
+      link: "https://pckeyzone.com"
     },
     {
       title: "Swayam Siddhi College Website",
@@ -149,6 +150,7 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
       tech: ["Next.js", "TailwindCSS", "TypeScript", "Node.js", "NGINX"],
       image: "/projects/SSCMR_College.png",
       desc: "A premium, accessible portal serving thousands of students and faculty, featuring dynamic news feeds, course guides, and enquiry forms.",
+      link: "https://swayamsiddhi.org/"
     }
   ];
 
@@ -226,15 +228,15 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
           {/* Hero Left Content */}
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/10 border border-blue-500/20 text-blue-400 font-bold text-xs uppercase tracking-wider ">
-              <Sparkles size={14} className="animate-pulse" /> Limited Time Independence Offer
+              <Sparkles size={14} className="animate-pulse" /> STARTER WEBSITE OFFER
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-calibri text-white tracking-tight leading-[1.1] font-heading">
               Professional Business Website for Just <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 font-arial ">₹14,999</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-slate-400 leading-relaxed max-w-2xl">
-              Establish a premium online identity. Get a modern, mobile-friendly, Google-optimized website designed to showcase your services and generate incoming customer leads.
+            <p className="text-lg md:text-xl text-slate-400 leading-relaxed max-w-2xl ">
+              Establish a premium online identity. Get a modern, mobile-friendly, Google-optimized(SEO-Ready) website designed to showcase your services and generate incoming customer leads.
             </p>
 
             {/* Offer Callouts */}
@@ -259,19 +261,20 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
 
             {/* Hero CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              {/* <a
+              <a
                 href="#get-started"
                 className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-4 transition-all duration-300 hover:shadow-[0_0_30px_rgba(37,99,235,0.4)] group  text-center"
               >
                 Get My Website
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a> */}
+              </a>
               <button
                 onClick={handleWhatsAppChat}
                 className="inline-flex items-center justify-center gap-2 bg-[#128c7e]/15 border border-[#128c7e]/30 hover:bg-[#128c7e]/25 text-[#25d366] font-bold px-8 py-4 transition-all duration-300  text-center"
               >
                 <WhatsAppIcon className="w-5 h-5 fill-current" />
-                Connect on WhatsApp
+                {/* Connect on WhatsApp  */}
+                WhatsApp an Expert
               </button>
             </div>
 
@@ -299,7 +302,7 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
                 <div className="space-y-3 py-2">
                   <div className="flex items-start gap-2.5">
                     <CheckCircle2 size={16} className="text-emerald-500 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-slate-300">5-7 Dynamic Pages (Home, About, Services, Contact, etc.)</span>
+                    <span className="text-sm text-slate-300">Up to 7 Professional Business Pages (Home, About, Services, Contact, etc.)</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <CheckCircle2 size={16} className="text-emerald-500 mt-0.5 flex-shrink-0" />
@@ -339,13 +342,13 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
       </section>
 
       {/* Feature Icons Row */}
-      <section className="py-8 bg-[#0a0f1c]/80 border-y border-slate-800/60 z-10 relative">
+      <section className="py-8 bg-[#0a0f1c]/80 border-y border-slate-800/60 z-10 relative lg:block hidden">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
             {[
               { label: "Modern Layouts", icon: <Layout size={20} className="text-blue-500" /> },
               { label: "Mobile Responsive", icon: <TabletSmartphone size={20} className="text-blue-500" /> },
-              { label: "Google Optimized", icon: <Sparkles size={20} className="text-blue-500" /> },
+              { label: "SEO-Ready Structure", icon: <Sparkles size={20} className="text-blue-500" /> },
               { label: "Fast Loading Pages", icon: <Zap size={20} className="text-blue-500" /> },
               { label: "Secure & Reliable", icon: <ShieldCheck size={20} className="text-blue-500" /> },
             ].map((item, idx) => (
@@ -361,28 +364,28 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
       </section>
 
       {/* What You Get Detail Grid */}
-      <section className="py-20 max-w-[1400px] mx-auto px-6 lg:px-12 z-10 relative">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+      <section className="lg:py-20 max-w-[1400px] mx-auto px-6 lg:px-12 z-10 relative">
+        <div className="text-center max-w-3xl mx-auto mb-10 lg:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold font-calibri text-white font-heading">
             What You Get in Our ₹14,999 Website Package
           </h2>
-          <p className="text-slate-400 mt-4 leading-relaxed">
+          <p className="text-slate-400 mt-4 leading-relaxed text-sm lg:text-base">
             Everything you need to introduce your brand, reach target customers online, and kickstart commercial sales. No hidden setup costs.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid  md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-6">
           {features.map((feat, idx) => (
             <div
               key={idx}
-              className="p-6 bg-[#0a0f1c]/50 border border-slate-800/80  hover:border-green-500/30 transition-all duration-300 flex items-start gap-4 group"
+              className="p-4 lg:p-4 bg-[#0a0f1c]/50 border border-slate-800/80  hover:border-green-500/30 transition-all duration-300 flex items-start gap-4 group"
             >
-              <div className="w-9 h-9 bg-slate-900 border border-slate-800  flex items-center justify-center text-green-500 group-hover:border-green-500 group-hover:text-green-400 flex-shrink-0 transition-colors">
+              <div className="lg:w-9 lg:h-9 w-7 h-7 bg-slate-900 border border-slate-800 mt-1 flex items-center justify-center text-green-500 group-hover:border-green-500 group-hover:text-green-400 flex-shrink-0 transition-colors">
                 <Check size={18} />
               </div>
               <div>
-                <h3 className="text-base font-bold text-white mb-1.5">{feat.title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed">{feat.desc}</p>
+                <h3 className="text-base font-bold text-white lg:mb-1.5">{feat.title}</h3>
+                <p className="text-slate-400 text-sm ">{feat.desc}</p>
               </div>
             </div>
           ))}
@@ -390,24 +393,24 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
       </section>
 
       {/* Perfect For Section */}
-      <section className="py-20 bg-[#0a0f1c]/40 border-y border-slate-800/50 z-10 relative">
+      <section className="py-12 lg:py-20 bg-[#0a0f1c]/40 border-y border-slate-800/50 z-10 relative">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="grid lg:grid-cols-12 gap-12 items-center">
+          <div className="grid lg:grid-cols-12 lg:gap-12 gap-4 items-center">
 
             <div className="lg:col-span-5 space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold font-calibri text-white font-heading leading-tight">
                 Designed to Match Your Specific Industry
               </h2>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-slate-400 leading-relaxed text-sm lg:text-base">
                 Whether you run a local workshop, a coaching hub, or supply products to other companies, a professional website gives your clients confidence that you are reliable.
               </p>
               {/* <p className="text-slate-400 leading-relaxed">
                 We design and layout content targeted to your unique target audience, steering them cleanly toward placing enquiries.
               </p> */}
-              <div className="pt-2">
+              <div className="pt-2 lg:flex hidden">
                 <a
                   href="#get-started"
-                  className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-3  transition-colors"
+                  className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-3  transition-colors "
                 >
                   Start My Design
                   <ArrowRight size={16} />
@@ -424,15 +427,15 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
                   whileHover={{ x: -5 }}
-                  className="bg-[#0A0F1E] flex items-start lg:gap-4 lg:p-6 align-center p-2 group transition-all duration-300 border border-slate-600 hover:border-slate-400"
+                  className="bg-[#0A0F1E] flex items-start lg:gap-4 lg:p-4 align-center p-2 group transition-all duration-300 border border-slate-600 hover:border-slate-400"
                 >
-                  <div className="p-3 bg-blue-500/10 text-blue-500 transition-colors shrink-0">
+                  <div className="lg:p-3 p-2 bg-blue-500/10 text-blue-500 transition-colors shrink-0  lg:mt-2">
                     {market.icon}
                   </div>
                   <div>
-                    <h4 className="h-8 p-3 lg:p-0 lg:text-xl font-bold text-white mb-1 transition-all">{market.title}</h4>
+                    <h4 className="h-8 p-1 pl-2  lg:p-0 lg:text-xl font-bold text-white mb-1 lg:mb-0 transition-all">{market.title}</h4>
                     <p className="text-slate-400 hidden lg:block">{market.desc}</p>
-                    <p className="text-slate-400 text-sm block lg:hidden px-3 pb-3">{market.desc}</p>
+                    {/* <p className="text-slate-400 text-sm block lg:hidden px-3 pb-3">{market.desc}</p> */}
                   </div>
                 </motion.div>
               ))}
@@ -443,23 +446,23 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
       </section>
 
       {/* Before vs After Section */}
-      <section className="py-20 max-w-[1400px] mx-auto px-6 lg:px-12 z-10 relative">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+      <section className="py-12 lg:py-20 max-w-[1400px] mx-auto px-6 lg:px-12 z-10 relative">
+        <div className="text-center max-w-3xl mx-auto lg:mb-16 mb-8">
           <h2 className="text-3xl md:text-4xl font-bold font-calibri text-white font-heading">
             Focus on Business Outcomes
           </h2>
-          <p className="text-slate-400 mt-4 leading-relaxed">
+          <p className="text-slate-400 mt-4 leading-relaxed lg:text-base text-sm">
             A website shouldn't just exist. It must serve as an active partner that attracts users, answers inquiries, and schedules calls.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:gap-8 gap-4 md:max-w-6xl mx-auto">
           {/* Without website */}
           <div className="p-8 bg-[#0a0f1c]/30 border border-red-500/15  space-y-5">
-            <h3 className="text-xl font-bold text-red-400 flex items-center gap-2 border-b border-slate-800 pb-3">
+            <h3 className="text-lg lg:text-2xl font-bold text-red-400 flex items-center gap-2 border-b border-slate-800 pb-3">
               <span>Without a Professional Website</span>
             </h3>
-            <ul className="space-y-3.5">
+            <ul className="lg:space-y-4 space-y-3 ">
               {[
                 "Prospects search Google and can't easily find your brand.",
                 "Sharing generic social media profiles makes your business look casual.",
@@ -478,12 +481,13 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
           {/* With ProgrammingProphet */}
           <div className="p-8 bg-[#0a0f1c]/90 border border-emerald-500/20  space-y-5 shadow-xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 blur-2xl " />
-            <h3 className="text-xl font-bold text-emerald-400 flex items-center gap-2 border-b border-slate-800 pb-3">
+            <h3 className="text-lg lg:text-2xl font-bold text-emerald-400 flex items-center gap-2 border-b border-slate-800 pb-3">
               <span>With a ProgrammingProphet Website</span>
             </h3>
-            <ul className="space-y-3.5">
+            <ul className="space-y-4">
               {[
-                "Appear on Google Search results for relevant services in your area.",
+                // "Appear on Google Search results for relevant services in your area.",
+                "Give Google a professional website to discover and index.",
                 "Build confidence and establish a strong, premium online reputation.",
                 "Showcase testimonials, real client works, and details in one portal.",
                 "Automatic form captures and WhatsApp triggers run 24/7.",
@@ -500,7 +504,7 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
       </section>
 
       {/* How it Works Section */}
-      <section className="py-20 bg-[#0a0f1c]/30 border-y border-slate-800/50 z-10 relative">
+      <section className="py-12 lg:py-20 bg-[#0a0f1c]/30 border-y border-slate-800/50 z-10 relative">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold font-calibri text-white font-heading">
@@ -571,13 +575,22 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
                   </p>
                 </div>
 
-                <div className="flex flex-wrap gap-1.5 mt-auto pt-2">
+                <div className="flex flex-wrap gap-1.5 mt-auto pt-2 mb-4">
                   {proj.tech.map((t, i) => (
                     <span key={i} className="text-[11px] font-semibold bg-slate-900 border border-slate-800/80 px-2 py-0.5 text-slate-300">
                       {t}
                     </span>
                   ))}
                 </div>
+
+                <a
+                  href={proj.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-semibold text-sm transition-colors group/link"
+                >
+                  View Live Website <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
+                </a>
               </div>
             </div>
           ))}
@@ -585,7 +598,7 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-[#0a0f1c]/40 border-y border-slate-800/50 z-10 relative">
+      <section className="py-12 lg:py-20 bg-[#0a0f1c]/40 border-y border-slate-800/50 z-10 relative">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold font-calibri text-white font-heading">
@@ -643,7 +656,7 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
       </section>
 
       {/* Pricing Packages Section */}
-      <section className="py-20 max-w-[1400px] mx-auto px-6 lg:px-12 z-10 relative">
+      <section className="py-12 lg:py-20 max-w-[1400px] mx-auto px-6 lg:px-12 z-10 relative">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold font-calibri text-white font-heading">
             Transparent Pricing Plans
@@ -702,14 +715,18 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
           {/* Plan 2: Business (Recommended) */}
           <div className="bg-[#0a0f1c]/95 border-2 border-blue-500  p-6 relative flex flex-col justify-between h-full shadow-2xl scale-102">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-blue-600 text-white text-xs font-bold px-3 py-1  uppercase tracking-wider">
-              Most Popular
+              {/* Most Popular */}
+              {/* FEATURED */}
+              {/* Recommended */}
+              Professional
             </div>
 
             <div className="space-y-4">
               <div>
                 {/* <span className="text-xs font-bold text-blue-400 uppercase tracking-wider bg-blue-500/10 px-2 py-0.5 ">Advanced Growth</span> */}
-                <h3 className="text-xl font-bold text-white mt-2">Professional Business</h3>
-                <p className="text-xs text-slate-400 mt-1">Best for established brands seeking leads.</p>
+                <h3 className="text-xl font-bold text-white mt-2">Business Growth</h3>
+                {/* <p className="text-xs text-slate-400 mt-1">Best for established brands seeking leads.</p> */}
+                <p className="text-xs text-slate-400 mt-1">For businesses looking to generate more enquiries.</p>
               </div>
 
               <div className="border-y border-slate-800 py-4">
@@ -753,7 +770,8 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
               <div>
                 {/* <span className="text-xs font-bold text-blue-400 uppercase tracking-wider bg-blue-500/10 px-2 py-0.5 ">Storefront</span> */}
                 <h3 className="text-xl font-bold text-white mt-2">Growth E-Commerce</h3>
-                <p className="text-xs text-slate-400 mt-1">For retailers who want to sell products online.</p>
+                {/* <p className="text-xs text-slate-400 mt-1">For retailers who want to sell products online.</p> */}
+                <p className="text-xs text-slate-400 mt-1">For businesses ready to sell online.</p>
               </div>
 
               <div className="border-y border-slate-800 py-4">
@@ -800,7 +818,7 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
       </section>
 
       {/* Qualification Lead Form Section */}
-      <section id="get-started" className="py-20 bg-[#0a0f1c]/80 border-y border-slate-800/60 z-10 relative">
+      <section id="get-started" className="py-12 lg:py-20 bg-[#0a0f1c]/80 border-y border-slate-800/60 z-10 relative">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
 
@@ -819,19 +837,19 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
               <div className="space-y-4 pt-2">
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8  bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
-                    <CheckCircle2 size={16} />
+                    <MessageSquare size={16} />
                   </div>
                   <span className="text-sm font-semibold text-slate-300">No obligation initial consultation</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8  bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
-                    <CheckCircle2 size={16} />
+                    <Briefcase size={16} />
                   </div>
                   <span className="text-sm font-semibold text-slate-300">Detailed proposal & live examples list</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8  bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
-                    <CheckCircle2 size={16} />
+                    <WhatsAppIcon className="w-4 h-4 fill-current" />
                   </div>
                   <span className="text-sm font-semibold text-slate-300">Direct phone/WhatsApp followups</span>
                 </div>
@@ -978,7 +996,10 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
                         </>
                       ) : (
                         <>
-                          Start My Website Project <ArrowUpRight size={16} />
+                          {/* Start My Website Project <ArrowUpRight size={16} /> */}
+                          Get My Free Website Consultation <ArrowUpRight size={16} />
+
+                          {/* Get My Free Website Consultation  */}
                         </>
                       )}
                     </button>
@@ -992,12 +1013,12 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
       </section>
 
       {/* Accordion FAQ Section */}
-      <section className="py-20 max-w-[1400px] mx-auto px-6 lg:px-12 z-10 relative">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold font-calibri text-white font-heading">
+      <section className="py-12 lg:py-20 max-w-[1400px] mx-auto px-6 lg:px-12 z-10 relative">
+        <div className="text-center max-w-3xl mx-auto mb-10 lg:mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold font-calibri text-white font-heading ">
             Frequently Asked Questions
           </h2>
-          <p className="text-slate-400 mt-4">
+          <p className="text-slate-400 mt-4 text-sm lg:text-base">
             Answers to common objections and concerns about our pricing, renewals, and features.
           </p>
         </div>
@@ -1038,7 +1059,7 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
       </section>
 
       {/* Technical Technology Stack Info (SEO-friendly, at bottom) */}
-      <section className="py-16 bg-[#030712] border-t border-slate-800/50 text-slate-400 z-10 relative">
+      {/* <section className="py-16 bg-[#030712] border-t border-slate-800/50 text-slate-400 z-10 relative lg:block hidden">
         <div className="max-w-[1000px] mx-auto px-6 lg:px-8 text-center space-y-8">
           <div className="space-y-3">
             <h3 className="text-sm font-bold text-slate-500 uppercase tracking-widest">Our Engineering Stack</h3>
@@ -1064,7 +1085,7 @@ Custom Requirements/Notes: ${formData.notes || 'None'}
             <span>AWS SECURE HOSTING</span>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Sticky Mobile WhatsApp Float Button */}
       <div className="fixed bottom-6 right-6 z-50 lg:hidden">
